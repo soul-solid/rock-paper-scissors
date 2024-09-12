@@ -1,4 +1,5 @@
-// logic for computer choice
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -10,22 +11,13 @@ function getComputerChoice() {
     } else if (randomNumber === 3) {
         return "scissors";
     }
-} 
-
-// logic for human choice
-
-function getHumanChoice() {
-   return prompt("What do you choose?", "Type your choice 👇👇").toLowerCase(); 
 }
 
-// logic
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function getHumanChoice() {
+    return prompt("What do you choose?", "Type your choice 👇👇").toLowerCase(); 
+}
 
 function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === computerChoice) {
@@ -50,17 +42,21 @@ function playGame() {
         }
     }
 
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
     playRound(humanSelection, computerSelection);
 }
 
-for (let i = 0; i <= 5; i++) {
-    getComputerChoice();
-    getHumanChoice();
+for (let i = 1; i <= 5; i++) {
+    console.log(`Round: ${i}`);
     playGame();
 }
 
-if (playerScore > computerScore) {
-    console.log(`Congrats! You win by ${playerScore - computerScore} points! (ˆᗜˆ)`);
-} else if (playerScore < computerScore) {
-    console.log(`Congrats! You lose by ${computerScore - playerScore} points! (ˆᗜˆ)`);
+if (humanScore > computerScore) {
+    console.log(`Congrats! You win by ${humanScore - computerScore} points! (ˆᗜˆ)`);
+} else if (humanScore < computerScore) {
+    console.log(`Congrats! You lose by ${computerScore - humanScore} points! (ˆᗜˆ)`);
+} else if (humanScore === computerScore) {
+    console.log(`Both of you are tied at ${humanScore}!`);
 }
