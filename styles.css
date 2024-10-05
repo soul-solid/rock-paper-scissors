@@ -117,17 +117,17 @@ body {
 
 .buttons #btn1 {
     color: var(--white);
-    background: url('/Images/rock.png') center / 130px 180px no-repeat;
+    background: url('Images/rock.png') center / 130px 180px no-repeat;
 }
 
 .buttons #btn2 {
     color: var(--white);
-    background: url('/Images/paper.png') center / 130px 180px no-repeat;
+    background: url('Images/paper.png') center / 130px 180px no-repeat;
 }
 
 .buttons #btn3 {
     color: var(--white);
-    background: url('/Images/scissors.png') center / 130px 180px no-repeat;
+    background: url('Images/scissors.png') center / 130px 180px no-repeat;
 }
 
 .display {
