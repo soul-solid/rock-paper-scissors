@@ -20,13 +20,13 @@ function getComputerChoice() {
 
 function checkWinner() {
     if (humanScore === 5) {
-        result.textContent = `Congrats! You win by ${humanScore - computerScore} points! (ˆᗜˆ)`;
+        update.textContent = `Congrats! You win by ${humanScore - computerScore} points! (ˆᗜˆ)`;
         resetScore();
     } else if (computerScore === 5) {
-        result.textContent = `Congrats! You lose by ${computerScore - humanScore} points! (ˆᗜˆ)`;
+        update.textContent = `Congrats! You lose by ${computerScore - humanScore} points! (ˆᗜˆ)`;
         resetScore();
     } else if (humanScore === 5 && computerScore === 5) {
-        result.textContent = `Both of you are tied at ${humanScore}!`;
+        update.textContent = `Both of you are tied at ${humanScore}!`;
         resetScore();
     }
 }
@@ -36,6 +36,7 @@ function resetScore() {
     computerScore = 0;
     playerScoreDisplay.innerText = `Player: ${humanScore}`;
     computerScoreDisplay.innerText = `Computer: ${computerScore}`;
+    
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -71,6 +72,7 @@ let humanSelection = "";
 let buttons = document.querySelector(".buttons");
 
 buttons.addEventListener("click", (event) => {
+    update.textContent = "";
     let target = event.target;
 
     switch (target.id) {
