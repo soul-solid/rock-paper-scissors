@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janken</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="header">
+        <h1>JANKEN</h1>
+    </div>
+    <div class="intro">
+        <span class="history">&#128161; Rock, paper, scissors <b>or</b> <i>Janken</i> (in Japanese, じゃん拳) is an intransitive hand game, usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). The earliest form of "rock paper scissors"-style game originated in China and was subsequently imported into Japan, where it reached its modern standardized form, before being spread throughout the world in the early 20th century.  &nbsp;&nbsp;&nbsp;&nbsp;-<cite><a href="https://en.wikipedia.org/wiki/Rock_paper_scissors#:~:text=Rock%20paper%20scissors%20(also,the%20early%2020th%20century." target="_blank">Wikipedia</a></cite></span>
+    </div>
+    <div class="instructions">
+        <h2>How to play</h2>
+        <ol>
+            <li>You have to choose one of three materials- rock, paper, and scissors.</li>
+            <li>Click one of the buttons corresponding to each one of the said materials below.</li>
+            <li>Rock beats scissors, scissors beats paper, and paper beats rock.</li>
+            <li>First to 5 points wins the game!</li>
+        </ol>
+    </div>
+    <div class="scores">
+        <p class="pScore">Your Score: 0</p>
+        <p class="cScore">Computer Score: 0</p>
+    </div>
+    <div class="buttons">
+        <button id="btn1">Rock</button>
+        <button id="btn2">Paper</button>
+        <button id="btn3">Scissors</button>
+    </div>
+    <div class="display">
+        <span class="update"></span>
+        <span class="result"></span>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

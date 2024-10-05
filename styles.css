@@ -1,0 +1,139 @@
+:root {
+    --black: #0f0e17;
+    --white: #fffffe;
+    --orange: #ff8906;
+    --gray: #a7a9be;
+    --secondary: #f25f4c;
+    --tertiary: #e53170;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.header {
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--secondary);
+}
+
+.header h1 {
+    margin: 20px auto;
+    font-family: "Righteous", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5em;
+}
+
+.intro {
+    margin-top: 130px;
+    border: 2px solid var(--tertiary);
+    border-radius: 20px;
+    background-color: var(--tertiary);
+    height: fit-content;
+    width: 80vw;
+    padding: 25px;
+    margin: 150px auto 0 auto;
+}
+
+.intro a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.intro a:hover {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.instructions h2 {
+    text-align: center;
+    margin-bottom: -15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.2em;
+}
+
+.instructions ol li {
+    margin: 10px auto 10px auto;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 50vw;
+    margin: 30px auto 20px auto;
+    padding: 40px 0;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    background-color: var(--secondary);
+}
+
+.buttons button {
+    height: 170px;
+    width: 130px;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.2em;
+}
+
+.buttons button:hover {
+    opacity: 0.8;
+}
+
+.buttons #btn1 {
+    color: var(--white);
+    background: url('/Images/rock.png') center / 130px 180px no-repeat;
+}
+
+.buttons #btn2 {
+    color: var(--white);
+    background: url('/Images/paper.png') center / 130px 180px no-repeat;
+}
+
+.buttons #btn3 {
+    color: var(--white);
+    background: url('/Images/scissors.png') center / 130px 180px no-repeat;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+}
